@@ -6,7 +6,11 @@ TEST_CASE("Verify Test Configuration", "verification") {
 }
 
 /*test case echo_variable */
+TEST_CASE("Test echo variable function", "Make sure the function returns the function argument value") {
+	REQUIRE(echo_number(5) == 5);
+	REQUIRE(echo_number(5) == 6);
 
+}
 /*test case add_to_double_1 with 0 as parameter*/
 
 /*test case add_to_double_1 with 1 as parameter*/
