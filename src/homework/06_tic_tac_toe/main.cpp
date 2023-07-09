@@ -2,8 +2,9 @@
 
 #include<iostream>
 #include<string>
+#include<vector>
 
-using std::cout; using std::cin; using std::string;
+using std::cout; using std::cin; using std::string; using std::vector;
 
 int main() 
 {
@@ -16,6 +17,15 @@ int main()
 		cout<<"Enter first player: ";
 		cin>>first_player;
 
+		if((first_player != "X") && (first_player != "O"))
+		{
+			do
+			{
+				cout<<"Please enter first player, X or O: ";
+				cin>>first_player;
+			}while((first_player != "X") && (first_player != "O"));
+		}
+
 		game.start_game(first_player);
 
 		int position;
@@ -26,14 +36,21 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
-
 		}
 
-		cout<<"Play again? Enter y or Y";
+		if (game.get_winner() == "C")
+        {
+            cout<<"It's a tie"<<"\n";
+        }
+        else
+        {
+            cout<<"The winner is: "<<game.get_winner()<<"\n";
+        }
+
+		cout<<"Play again? enter y or Y";
 		cin>>user_choice;
 
-
 	}while(user_choice == 'y' || user_choice == 'Y');
-	
+
 	return 0;
 }
