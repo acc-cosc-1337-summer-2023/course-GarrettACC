@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "if.h"
 #include "if_else_if.h"
+#include "switch.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);

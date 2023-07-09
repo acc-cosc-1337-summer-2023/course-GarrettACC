@@ -8,7 +8,7 @@ int main()
 {
 	//create a bool variable named even
 	//create an int variable named value
-	bool even;
+	bool ot;
 	int value;
 
 	//prompt user for a keyboard number
@@ -23,6 +23,10 @@ int main()
 	//display even if number is even
 	if(ot){
 		cout<<value<<" is overtime\n";
+	}
+	else
+	{
+		cout<<value<<" is not overtime\n";
 	}
 
 	return 0;

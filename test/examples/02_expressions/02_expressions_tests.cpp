@@ -10,3 +10,8 @@ TEST_CASE("Test int and double precedence")
 {
 	REQUIRE(convert_to_double(10, .5) == 5.0);
 }
+
+TEST_CASE("Test double to int conversion")
+{
+	REQUIRE(convert_double_to_int(10.5) == 10);
+}
